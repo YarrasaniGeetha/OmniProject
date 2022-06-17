@@ -1,0 +1,10 @@
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#gonia3nr0a)" stroke="#959FB3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7.16 13.696a5.833 5.833 0 1 0 0-11.667 5.833 5.833 0 0 0 0 11.667zM7.16 10.197V7.863M7.16 5.53h.007"/>
+    </g>
+    <defs>
+        <clipPath id="gonia3nr0a">
+            <path fill="#fff" transform="translate(.16 .863)" d="M0 0h14v14H0z"/>
+        </clipPath>
+    </defs>
+</svg>
