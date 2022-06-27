@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OMNI_Dashboard_New</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="root">
@@ -17,13 +24,12 @@
         </div>
         <nav class="header_list">
           <ul>
-            
-              <li>
-                <a href="#"></a>
-                <img src="/images/Home.svg" alt="Home_icon" />
-                <div>Dashboard</div>
-              </li>
-            </a>
+            <li>
+              <a href="#"></a>
+              <img src="/images/Home.svg" alt="Home_icon" />
+              <div>Dashboard</div>
+            </li>
+
             <li>
               <a href="#"></a>
               <img
@@ -50,24 +56,61 @@
               />Action Panel
             </li>
           </ul>
-          </nav>
-          <div class="profile">
-           <div class="notification"> <img src="/images/Shipment_Mgmt.svg" alt="Vector" /></div>
-            <div class="notification"><img src="/images/Shipment_Mgmt.svg" alt="notification" /></div>
-            <span class="name">Chance Kenter</span>
-            <img class="profile_pic" src="/images/user-profile.svg" alt="User icon" />
+        </nav>
+        <div class="profile">
+          <div class="notification">
+            <img src="/images/Shipment_Mgmt.svg" alt="Vector" />
           </div>
-          <div class="menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+          <div class="notification">
+            <img src="/images/Shipment_Mgmt.svg" alt="notification" />
           </div>
-        
+          <span class="name">Chance Kenter</span>
+          <img
+            class="profile_pic"
+            src="/images/user-profile.svg"
+            alt="User icon"
+          />
+        </div>
+
+        <i class="fas fa-bars toggle" id="toggle_hamburger"></i>
+        <img src="/images/menuClose.svg" alt="close icon" id="menu_close" />
       </header>
+      <div class="Mobile_menu" id="nav_bar">
+        <div class="list_menu">
+          <div>
+            <a href="#"></a>
+            <img src="images/MobileHome.svg" alt="Home_icon" />
+            Dashboard
+          </div>
+
+          <div>
+            <a href="#"></a>
+            <img src="/images/arrowshipment.svg" alt="shipment_icon" />Shipment
+          </div>
+          <div>
+            <a href="#"></a>
+            <img src="/images/arrowshipment.svg" alt="reports_icon" />Reports
+          </div>
+          <div>
+            <a href="#"></a>
+            <img
+              src="/images/arrowshipment.svg"
+              alt="control tower_icon"
+            />Control Tower
+          </div>
+          <div>
+            <a href="#"></a>
+            <img src="/images/arrowshipment.svg" alt="actionpanel_icon" />Action
+            Panel
+          </div>
+        </div>
+      </div>
+
       <section class="container">
         <div class="cards_container">
-          <div class="actions">
-            <div class="action">
+          <button class="carousel_button" id="previous"><</button>
+          <div class="actions" id="act">
+            <div class="action" id="act1">
               <div>
                 <div class="actions-to-take">
                   Actions to take
@@ -77,14 +120,14 @@
               </div>
               <div class="Image_check">
                 <img src="/images/check-circle.svg" alt="check-circle" />
-              
-              <!-- <span class="caurosal">
+
+                <!-- <span class="caurosal">
               <img src="/images/caurosal.svg" alt="Caurosal icon">
               <span aria-label="Next slide" class="nav next" role="button"></span>
               </span> -->
+              </div>
             </div>
-            </div>
-            <div class="action">
+            <div class="action" id="act2">
               <div>
                 <div class="actions-to-take">
                   Pending approvals
@@ -94,7 +137,7 @@
               </div>
               <div><img src="/images/clock.svg" alt="clock-icon" /></div>
             </div>
-            <div class="action">
+            <div class="action" id="act3">
               <div>
                 <div class="actions-to-take">
                   Delivered in full
@@ -110,386 +153,417 @@
                 <img src="/images/Group 33740.svg" alt="Delivar-icon" />
               </div>
             </div>
-            <div class="action">
+            <div class="action" id="act4">
               <div class="inbound">
-
-                  <div class="actions-to-take">
-                    Inbound Freight as % of COGS
-                    <div><img src="/images/info.svg" alt="vector_icon"/></div>
-                    
-                  </div>
-              <div class="Items">
-                <div class="Item_values">
-                  <p class="content_name">Frozen</p>
-                  <p class="circle">
-                  <span class="percentage_value">5%</span>
-                  </p>
+                <div class="actions-to-take">
+                  Inbound Freight as % of COGS
+                  <div><img src="/images/info.svg" alt="vector_icon" /></div>
                 </div>
+                <div class="Items">
                   <div class="Item_values">
-                  <p class="content_name">Perishable</p>
-                  <p class="circle">
-                  <span class="percentage_value">3%</span>
-                  </p>
-                   </div>
-                   <div class="Item_values">
-                  <p class="content_name">Fresh</p>
-                  <p class="circle">
-                  <span class="percentage_value">6%</span>
-                  
-
-                  </p>
+                    <p class="content_name">Frozen</p>
+                    <p class="circle">
+                      <span class="percentage_value">5%</span>
+                    </p>
                   </div>
                   <div class="Item_values">
-                  <p class="content_name">Dry</p>
-                  <p class="circle">
-                  <span class="percentage_value">10%</span>
-                  </p>
+                    <p class="content_name">Perishable</p>
+                    <p class="circle">
+                      <span class="percentage_value">3%</span>
+                    </p>
                   </div>
-                
-                
+                  <div class="Item_values">
+                    <p class="content_name">Fresh</p>
+                    <p class="circle">
+                      <span class="percentage_value">6%</span>
+                    </p>
+                  </div>
+                  <div class="Item_values">
+                    <p class="content_name">Dry</p>
+                    <p class="circle">
+                      <span class="percentage_value">10%</span>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div>
                 <img src="/images/Group 33741.svg" alt="Inbound-icon" />
               </div>
             </div>
-            <div class="action_Caurosal">
-              <span aria-label="Next slide" class="nav next" role="button"></span>
-            </div>
-            
           </div>
+          <button class="carousel_button" id="next">></button>
         </div>
-      <div class="Contents">
-        <div class="content_left">
-          <div class="content_list">
-          <div class="shipment_options">
-          <div class="shipment_list">
-            <div class="inbound_list">Inbound</div>
-            <div class="inbound_list">Outbound</div>
-            <div class="inbound_list">Watchlist</div>
-          </div>
-          <div class="view_all_shipments">
-              View all shipments
-              <img src="/images/Group 33759.svg" alt="Vector icon" />
-            </div>
-             <div class="view_all">View all
-              <img src="/images/Group 33759 (1).svg" alt="Vector icon" />
-             </div>
-            </div>
-          <div class="options">
-            <div class="options_list">
-              All <span class="text_style">(25)</span>
-            </div>
-            <div class="options_list">
-              Delayed <span class="text_style">(10)</span>
-            </div>
-            <div class="options_list">
-              Early <span class="text_style">(6)</span>
-            </div>
-            <div class="options_list">
-              Rescheduled <span class="text_style">(2)</span>
-            </div>
-            <div class="options_list">
-              Under Review <span class="text_style">(7)</span>
-            </div>
-            <div class="options_list">
-              On Time <span class="text_style">(7)</span>
-            </div>
-          </div>
-          <div class="search_bar" id="search" onkeyup="searchFun()">
-            <img src="/images/Group 33795.svg" alt="search icon" />
-            <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-            <input class="search_input_box" id="input_search" placeholder="&nbsp;&nbsp;Search by: Shipment ID, Origin, Destination, Product Category,Vendor">
-            
-            <input class="search_input" placeholder="&nbsp;&nbsp;Search">
-          </div>
-        </div>
-        
-        <div class="shipment_cards" id="card_shipment">
-          <div class="wrapper">
-            <div class="wrapper_header">
-            <div class="shipment_id">
-              <p>Shipment ID</p>
-              <p id="s_number">109669449</p>
-            </div>
-            <div class="header_icons">
-              <img src="/images/Group 33891.svg" alt="Global icon">
-              <img src="/images/Group 33887 (1).svg" alt="Truck icon">
-              <div class="timings">ON TIME</div>
-            </div>
-            </div>
-            <div class="wrapper_main">
-              
-              <div class="origin">
-                <div class="Arrow">
-                <img src="/images/Vector.svg" alt="Up Arrow">
+
+        <div class="Contents">
+          <div class="content_left">
+            <div class="content_list">
+              <div class="shipment_options">
+                <div class="shipment_list">
+                  <div class="inbound_list">Inbound</div>
+                  <div class="inbound_list">Outbound</div>
+                  <div class="inbound_list">Watchlist</div>
                 </div>
-                <div class="origin_contents">
-                <p>Origin</p>
-                <p>Sikkim, IN</p>
+                <div class="view_all_shipments">
+                  View all shipments
+                  <img src="/images/Group 33759.svg" alt="Vector icon" />
+                </div>
+                <div class="view_all">
+                  View all
+                  <img src="/images/Group 33759 (1).svg" alt="Vector icon" />
                 </div>
               </div>
-              <div class="origin">
-                 <div class="Arrow">
-                <img src="/images/Vector (1).svg" alt="Down Arrow">
+              <div class="options" id="lists">
+                <div class="options_list" id="list">
+                  <span>All</span> <span class="text_style">(25)</span>
                 </div>
-                <div class="origin_contents">
-                <p>Destination</p>
-                <p>Seattle, USA</p>
+                <div class="options_list">
+                  <span>Delayed</span>
+                  <span class="text_style_delayed">(10)</span>
                 </div>
+                <div class="options_list">
+                  <span>Early</span> <span class="text_style">(6)</span>
+                </div>
+                <div class="options_list">
+                  <span>Rescheduled</span> <span class="text_style">(2)</span>
+                </div>
+                <div class="options_list">
+                  <span>Under Review</span> <span class="text_style">(7)</span>
+                </div>
+                <div class="options_list">
+                  <span>On Time</span> <span class="text_style">(7)</span>
+                </div>
+                <button class="caurosal" id="end_carousal">
+                  <img
+                    class="arrow_carousal"
+                    src="/images/caurosal1.svg"
+                    alt="Caurosal Icon"
+                  />
+                </button>
+                <button class="caurosal" id="start_carousal">
+                  <img
+                    class="arrow_carousal"
+                    src="/images/caurosal1.svg"
+                    alt="Caurosal Icon"
+                  />
+                </button>
               </div>
-            </div>
-            <div class="details">
-            <div class="Shipment_planned_details">
-              <div class="planned">
-                <p>PO#</p>
-                <p>661234</p>
+
+              <div class="search_bar" id="search">
+                <img src="/images/Group 33795.svg" alt="search icon" />
+                <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+                <input
+                  class="search_input"
+                  id="input_search"
+                  placeholder="&nbsp;&nbsp;Search by: Shipment ID, Origin, Destination, Product Category,Vendor"
+                />
+
+                <input
+                  class="search_input"
+                  id="search_mobile"
+                  placeholder="&nbsp;&nbsp;Search"
+                />
               </div>
-              <div class="planned">
-                <p>Planned ETA</p>
-                <p>Jan 27, 2021 03:42 PM EST</p>
-              </div>
-            </div>
-            <div class="Shipment_planned_details">
-              <div class="planned">
-                <p>Vendor</p>
-                <p>Bailey</p>
-              </div>
-              <div class="planned">
-                <p>Current ETA</p>
-                <p>Jan 31, 2021 10:17 PM EST</p>
-              </div>
-              
-            </div>
-            </div>
-            <div class="shipment_logo_images">
-              <img src="/images/icon_Fire.svg" alt="Fire Icon">
-              <img src="/images/icon_Fire (1).svg" alt="Time Icon">
-              <img src="/images/Group 37169.svg" alt="Water Icon">
-              <img src="/images/icon_Fire (2).svg" alt="Drop Icon">
-              <img src="/images/icon_Fire (3).svg" alt="Vehicle Icon">
-              <img src="/images/icon_Fire (4).svg" alt="Light Icon">
-            </div>
             </div>
 
-            
-             <div class="wrapper">
-            <div class="wrapper_header">
-            <div class="shipment_id">
-              <p>Shipment ID</p>
-              <p>109669412</p>
-            </div>
-            <div class="header_icons">
-              <img src="/images/Group 33891.svg" alt="Global icon">
-              <img src="/images/Group 33886.svg" alt="Flight icon">
-              <div class="timings">ON TIME</div>
-            </div>
-            </div>
-            <div class="wrapper_main">
-              
-              <div class="origin">
-                <div class="Arrow">
-                <img src="/images/Vector.svg" alt="Up Arrow">
-                 </div>
-                 <div class="origin_contents">
-                <p>Origin</p>
-                <p>Spain, IE</p>
+            <div class="shipment_cards" id="card_shipment">
+              <div class="wrapper" id="one">
+                <div class="wrapper_header">
+                  <div class="shipment_id">
+                    <p>Shipment ID</p>
+                    <p class="s_number">109669449</p>
+                  </div>
+                  <div class="header_icons">
+                    <img src="/images/Group 33891.svg" alt="Global icon" />
+                    <img src="/images/Group 33887 (1).svg" alt="Truck icon" />
+                    <div class="timings">ON TIME</div>
+                  </div>
                 </div>
+                <div class="wrapper_main">
+                  <div class="origin">
+                    <div class="Arrow">
+                      <img src="/images/Vector.svg" alt="Up Arrow" />
+                    </div>
+                    <div class="origin_contents">
+                      <p>Origin</p>
+                      <p class="s_origin">Sikkim, IN</p>
+                    </div>
+                  </div>
+                  <div class="origin">
+                    <div class="Arrow">
+                      <img src="/images/Vector (1).svg" alt="Down Arrow" />
+                    </div>
+                    <div class="origin_contents">
+                      <p>Destination</p>
+                      <p class="s_destination">Seattle, USA</p>
+                    </div>
+                  </div>
                 </div>
-              <div class="origin">
-                <div class="Arrow">
-                <img src="/images/Vector (1).svg" alt="Down Arrow">
-              </div>
-              <div class="origin_contents">
-                <p>Destination</p>
-                <p>Seattle, USA</p>
+                <div class="details">
+                  <div class="Shipment_planned_details">
+                    <div class="planned">
+                      <p>PO#</p>
+                      <p>661234</p>
+                    </div>
+                    <div class="planned">
+                      <p>Planned ETA</p>
+                      <p>Jan 27, 2021 03:42 PM EST</p>
+                    </div>
+                  </div>
+                  <div class="Shipment_planned_details">
+                    <div class="planned">
+                      <p>Vendor</p>
+                      <p>Bailey</p>
+                    </div>
+                    <div class="planned">
+                      <p>Current ETA</p>
+                      <p>Jan 31, 2021 10:17 PM EST</p>
+                    </div>
+                  </div>
                 </div>
-                </div>
-              
-            </div>
-            <div class="details">
-            <div class="Shipment_planned_details">
-              <div class="planned">
-                <p>PO#</p>
-                <p>661234</p>
-              </div>
-              <div class="planned">
-                <p>Planned ETA</p>
-                <p>Jan 27, 2021 03:42 PM EST</p>
-              </div>
-            </div>
-            <div class="Shipment_planned_details">
-              <div class="planned">
-                <p>Vendor</p>
-                <p>Bailey</p>
-              </div>
-              <div class="planned">
-                <p>Current ETA</p>
-                <p>Jan 31, 2021 10:17 PM EST</p>
-              </div>
-              
-            </div>
-            </div>
-            <div class="shipment_logo_images">
-              <img src="/images/icon_Fire.svg" alt="Fire Icon">
-              <img src="/images/icon_Fire (1).svg" alt="Time Icon">
-              <img src="/images/Group 37169.svg" alt="Water Icon">
-              <img src="/images/icon_Fire (2).svg" alt="Drop Icon">
-              <img src="/images/icon_Fire (3).svg" alt="Vehicle Icon">
-              <img src="/images/icon_Fire (4).svg" alt="Light Icon">
-            </div>
-            </div>
-            <div class="wrapper">
-            <div class="wrapper_header">
-            <div class="shipment_id">
-              <p>Shipment ID</p>
-              <p>109669432</p>
-            </div>
-            <div class="header_icons">
-              <img src="/images/Group 33891.svg" alt="Global icon">
-              <img src="/images/Group 33882.svg" alt="Ship icon">
-              <div class="timings">DELAYED</div>
-            </div>
-            </div>
-            <div class="tracking_info">
-              <div class="tracking_content">Awaiting Tracking Info
-              <span class="tracking_content_icon"></span>
-              </div>
-              <div class="tracking_content">4 hrs delayed</div>
-            </div>
-            <div class="wrapper_main">
-              
-              <div class="origin">
-                <div class="Arrow">
-                <img src="/images/Vector.svg" alt="Up Arrow">
-                </div>
-                <div class="origin_contents">
-                <p>Origin</p>
-                <p>Dublin, IR</p>
+                <div class="shipment_logo_images">
+                  <img src="/images/icon_Fire.svg" alt="Fire Icon" />
+                  <img src="/images/icon_Fire (1).svg" alt="Time Icon" />
+                  <img src="/images/Group 37169.svg" alt="Water Icon" />
+                  <img src="/images/icon_Fire (2).svg" alt="Drop Icon" />
+                  <img src="/images/icon_Fire (3).svg" alt="Vehicle Icon" />
+                  <img src="/images/icon_Fire (4).svg" alt="Light Icon" />
                 </div>
               </div>
-              <div class="origin">
-                <div class="Arrow">
-                <img src="/images/Vector (1).svg" alt="Down Arrow">
-              </div>
-              <div class="origin_contents">
-                <p>Destination</p>
-                <p>Seattle, USA</p>
+
+              <div class="wrapper" id="two">
+                <div class="wrapper_header">
+                  <div class="shipment_id">
+                    <p>Shipment ID</p>
+                    <p class="s_number">109669412</p>
+                  </div>
+                  <div class="header_icons">
+                    <img src="/images/Group 33891.svg" alt="Global icon" />
+                    <img src="/images/Group 33886.svg" alt="Flight icon" />
+                    <div class="timings">ON TIME</div>
+                  </div>
+                </div>
+                <div class="wrapper_main">
+                  <div class="origin">
+                    <div class="Arrow">
+                      <img src="/images/Vector.svg" alt="Up Arrow" />
+                    </div>
+                    <div class="origin_contents">
+                      <p>Origin</p>
+                      <p class="s_origin">Spain, IE</p>
+                    </div>
+                  </div>
+                  <div class="origin">
+                    <div class="Arrow">
+                      <img src="/images/Vector (1).svg" alt="Down Arrow" />
+                    </div>
+                    <div class="origin_contents">
+                      <p>Destination</p>
+                      <p class="s_destination">Seattle, USA</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="Shipment_planned_details">
+                    <div class="planned">
+                      <p>PO#</p>
+                      <p>661234</p>
+                    </div>
+                    <div class="planned">
+                      <p>Planned ETA</p>
+                      <p>Jan 27, 2021 03:42 PM EST</p>
+                    </div>
+                  </div>
+                  <div class="Shipment_planned_details">
+                    <div class="planned">
+                      <p>Vendor</p>
+                      <p>Bailey</p>
+                    </div>
+                    <div class="planned">
+                      <p>Current ETA</p>
+                      <p>Jan 31, 2021 10:17 PM EST</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="shipment_logo_images">
+                  <img src="/images/icon_Fire.svg" alt="Fire Icon" />
+                  <img src="/images/icon_Fire (1).svg" alt="Time Icon" />
+                  <img src="/images/Group 37169.svg" alt="Water Icon" />
+                  <img src="/images/icon_Fire (2).svg" alt="Drop Icon" />
+                  <img src="/images/icon_Fire (3).svg" alt="Vehicle Icon" />
+                  <img src="/images/icon_Fire (4).svg" alt="Light Icon" />
                 </div>
               </div>
-            </div>
-            <div class="details">
-            <div class="Shipment_planned_details">
-              <div class="planned">
-                <p>PO#</p>
-                <p>661234</p>
-              </div>
-              <div class="planned">
-                <p>Planned ETA</p>
-                <p>Jan 27, 2021 03:42 PM EST</p>
-              </div>
-            </div>
-            <div class="Shipment_planned_details">
-              <div class="planned">
-                <p>Vendor</p>
-                <p>Bailey</p>
-              </div>
-              <div class="planned">
-                <p>Current ETA</p>
-                <p>Jan 31, 2021 10:17 PM EST</p>
-              </div>
-              
-            </div>
-            </div>
-            <div class="shipment_logo_images">
-              <img src="/images/icon_Fire.svg" alt="Fire Icon">
-              <img src="/images/icon_Fire (1).svg" alt="Time Icon">
-              <img src="/images/Group 37169.svg" alt="Water Icon">
-              <img src="/images/icon_Fire (2).svg" alt="Drop Icon">
-              <img src="/images/icon_Fire (3).svg" alt="Vehicle Icon">
-              <img src="/images/icon_Fire (4).svg" alt="Light Icon">
-            </div>
-            </div>
-            <div class="wrapper">
-            <div class="wrapper_header">
-            <div class="shipment_id">
-              <p>Shipment ID</p>
-              <p>109669401</p>
-            </div>
-            <div class="header_icons">
-              <img src="/images/Group 33892.svg" alt="Global icon">
-              <img src="/images/Group 33886.svg" alt="Flight icon">
-              <div class="timings">RESCHEDULED</div>
-            </div>
-            </div>
-            <div class="wrapper_main">
-              <div class="origin">
-                <div class="arrow">
-                <img src="/images/Vector.svg" alt="Up Arrow">
+              <div class="wrapper" id="three">
+                <div class="wrapper_header">
+                  <div class="shipment_id">
+                    <p>Shipment ID</p>
+                    <p class="s_number">109669432</p>
+                  </div>
+                  <div class="header_icons">
+                    <img src="/images/Group 33891.svg" alt="Global icon" />
+                    <img src="/images/Group 33882.svg" alt="Ship icon" />
+                    <div class="timings">DELAYED</div>
+                  </div>
                 </div>
-              
-                <div class="origin_contents">
-                <p>Origin</p>
-                <p> Limoges, FR</p>
-                 </div>
-              </div>
-              <div class="origin">
-                <div class="arrow">
-                <img src="/images/Vector (1).svg" alt="Down Arrow">
+                <!-- <div class="tracking_info">
+                  <div class="tracking_content">
+                    Awaiting Tracking Info
+                    <span class="tracking_content_icon"></span>
+                  </div>
+                  <div class="tracking_content">4 hrs delayed</div>
+                </div> -->
+                <div class="wrapper_main">
+                  <div class="origin">
+                    <div class="Arrow">
+                      <img src="/images/Vector.svg" alt="Up Arrow" />
+                    </div>
+                    <div class="origin_contents">
+                      <p>Origin</p>
+                      <p class="s_origin">Dublin, IR</p>
+                    </div>
+                  </div>
+                  <div class="origin">
+                    <div class="Arrow">
+                      <img src="/images/Vector (1).svg" alt="Down Arrow" />
+                    </div>
+                    <div class="origin_contents">
+                      <p>Destination</p>
+                      <p class="s_destination">Seattle, USA</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="origin_contents">
-                <p>Destination</p>
-                <p>Seattle, USA</p>
+                <div class="details">
+                  <div class="Shipment_planned_details">
+                    <div class="planned">
+                      <p>PO#</p>
+                      <p>661234</p>
+                    </div>
+                    <div class="planned">
+                      <p>Planned ETA</p>
+                      <p>Jan 27, 2021 03:42 PM EST</p>
+                    </div>
+                  </div>
+                  <div class="Shipment_planned_details">
+                    <div class="planned">
+                      <p>Vendor</p>
+                      <p>Bailey</p>
+                    </div>
+                    <div class="planned">
+                      <p>Current ETA</p>
+                      <p>Jan 31, 2021 10:17 PM EST</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="shipment_logo_images">
+                  <img src="/images/icon_Fire.svg" alt="Fire Icon" />
+                  <img src="/images/icon_Fire (1).svg" alt="Time Icon" />
+                  <img src="/images/Group 37169.svg" alt="Water Icon" />
+                  <img src="/images/icon_Fire (2).svg" alt="Drop Icon" />
+                  <img src="/images/icon_Fire (3).svg" alt="Vehicle Icon" />
+                  <img src="/images/icon_Fire (4).svg" alt="Light Icon" />
                 </div>
               </div>
-            </div>
-            <div class="details">
-            <div class="Shipment_planned_details">
-              <div class="planned">
-                <p>PO#</p>
-                <p>661234</p>
+              <div class="wrapper" id="four">
+                <div class="wrapper_header">
+                  <div class="shipment_id">
+                    <p>Shipment ID</p>
+                    <p class="s_number">109669401</p>
+                  </div>
+                  <div class="header_icons">
+                    <img src="/images/Group 33892.svg" alt="Global icon" />
+                    <img src="/images/Group 33886.svg" alt="Flight icon" />
+                    <div class="timings">RESCHEDULED</div>
+                  </div>
+                </div>
+                <div class="wrapper_main">
+                  <div class="origin">
+                    <div class="arrow">
+                      <img src="/images/Vector.svg" alt="Up Arrow" />
+                    </div>
+
+                    <div class="origin_contents">
+                      <p>Origin</p>
+                      <p class="s_origin">Limoges, FR</p>
+                    </div>
+                  </div>
+                  <div class="origin">
+                    <div class="arrow">
+                      <img src="/images/Vector (1).svg" alt="Down Arrow" />
+                    </div>
+                    <div class="origin_contents">
+                      <p>Destination</p>
+                      <p class="s_destination">Seattle, USA</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="Shipment_planned_details">
+                    <div class="planned">
+                      <p>PO#</p>
+                      <p>661234</p>
+                    </div>
+                    <div class="planned">
+                      <p>Planned ETA</p>
+                      <p>Jan 27, 2021 03:42 PM EST</p>
+                    </div>
+                  </div>
+                  <div class="Shipment_planned_details">
+                    <div class="planned">
+                      <p>Vendor</p>
+                      <p>Bailey</p>
+                    </div>
+                    <div class="planned">
+                      <p>Current ETA</p>
+                      <p>Jan 31, 2021 10:17 PM EST</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="shipment_logo_images">
+                  <img src="/images/icon_Fire.svg" alt="Fire Icon" />
+                  <img src="/images/icon_Fire (1).svg" alt="Time Icon" />
+                  <img src="/images/Group 37169.svg" alt="Water Icon" />
+                  <img src="/images/icon_Fire (2).svg" alt="Drop Icon" />
+                  <img src="/images/icon_Fire (3).svg" alt="Vehicle Icon" />
+                  <img src="/images/icon_Fire (4).svg" alt="Light Icon" />
+                </div>
               </div>
-              <div class="planned">
-                <p>Planned ETA</p>
-                <p>Jan 27, 2021 03:42 PM EST</p>
-              </div>
-            </div>
-            <div class="Shipment_planned_details">
-              <div class="planned">
-                <p>Vendor</p>
-                <p>Bailey</p>
-              </div>
-              <div class="planned">
-                <p>Current ETA</p>
-                <p>Jan 31, 2021 10:17 PM EST</p>
-              </div>
-              
-            </div>
-            </div>
-            <div class="shipment_logo_images">
-              <img src="/images/icon_Fire.svg" alt="Fire Icon">
-              <img src="/images/icon_Fire (1).svg" alt="Time Icon">
-              <img src="/images/Group 37169.svg" alt="Water Icon">
-              <img src="/images/icon_Fire (2).svg" alt="Drop Icon">
-              <img src="/images/icon_Fire (3).svg" alt="Vehicle Icon">
-              <img src="/images/icon_Fire (4).svg" alt="Light Icon">
             </div>
           </div>
-       </div>
-         </div>
+          <!-- <footer class="risk_chain_content"> -->
           <div class="content_right">
-            <div class="risk_chain">Risk Chain
-            <img class="arrow_up" src="/images/Group 33767.svg" alt="Arrow up image">
+            <div class="risk_chain">
+              Risk Chain
+              <img
+                class="arrow_up"
+                src="/images/Group 33767.svg"
+                alt="Arrow up image"
+              />
             </div>
-          <div class="map_description">
-            <h2>UST Omni</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aut, dolor placeat, enim blanditiis voluptas quod totam, saepe qui minus aspernatur ratione omnis hic animi rerum. Maiores sunt veniam tempore!</p>
+            <div class="map_description">
+              <h2>UST Omni</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                aut, dolor placeat, enim blanditiis voluptas quod totam, saepe
+                qui minus aspernatur ratione omnis hic animi rerum. Maiores sunt
+                veniam tempore!
+              </p>
             </div>
-            </div>
+          </div>
+
+          <!-- </footer> -->
         </div>
       </section>
+      <footer class="footer">
+        <div class="risk_chain_footer">
+          Risk Chain
+          <img
+            class="arrow_up"
+            src="/images/Group 33767.svg"
+            alt="Arrow up image"
+          />
+        </div>
+      </footer>
     </div>
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
   </body>
-  
 </html>
